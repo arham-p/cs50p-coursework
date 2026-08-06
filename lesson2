@@ -1,0 +1,51 @@
+
+def main():
+    number = get_number()
+    meow(number)
+
+def get_number():
+    while True:
+        n = int(input('What is n? '))
+        if n > 0:
+            break
+    return n
+
+def meow(n):
+    for _ in range(n):
+        print('meow')
+
+main()
+
+#Lists
+
+students1 = ['Hermoine', 'Harry', 'Ron']
+
+for student in students1:
+    print(student)
+
+for i in range(len(students1)):
+    print(i + 1, students1[i])
+
+students2 = [
+    {'name':'Hermoine', 'house': 'Gryffindor', 'patronus': 'Otter'},
+    {'name': 'Harry', 'house': 'Gryffindor', 'patronus': 'stag'},
+    {'name': 'Ron', 'house': 'Slytherin', 'patronus': "Jack Russell terrier"},
+    {'name': 'Draco', 'house': 'Slytherin', 'patronus': None}
+]
+for student in students2:
+    print(student['name'], student['house'], student['patronus'], sep= ", ")
+
+
+#Mario
+
+def main():
+    print_square(3)
+
+def print_square(size):
+    for i in range(size):
+        for j in range(size):
+            print('#', end='')
+        print()
+
+
+main()
